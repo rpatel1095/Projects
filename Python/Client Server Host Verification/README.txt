@@ -10,20 +10,21 @@ Usage:
 * The user will run the three server files first in the following order: AS.py, TLDS1.py, TLDS2.py
 * Then the user will run the client.py file and the communication between the server and client should began
 * The files are written such that it will fetch the name of your local host machine as the hosting server.
+
 Purpose:
-* The client will iterate each line in the file ìPROJ3-HNS.txtî which consist of a key, hostname pair
+* The client will iterate each line in the file ‚ÄúPROJ3-HNS.txt‚Äù which consist of a key, hostname pair
 	o The key will be used to hash the hostname
 * The hashed hostname will then be sent to the AS server to validate if the host name is valid.
 * The AS server will then first try to connect to the TLDS1 server 
-	o The TLDS1 server contains a list of host name in ìPROJ3-TLDS1.txtî
-	o The TLDS1 server will then fetch a key value stored in the ìPROJ3-KEY1.txtî and hash all the host names from the previous step
-	o It will then check if the hashed hostname from the AS server matches any values from itís list of hashed servers
+	o The TLDS1 server contains a list of host name in ‚ÄúPROJ3-TLDS1.txt‚Äù
+	o The TLDS1 server will then fetch a key value stored in the ‚ÄúPROJ3-KEY1.txt‚Äù and hash all the host names from the previous step
+	o It will then check if the hashed hostname from the AS server matches any values from it‚Äôs list of hashed servers
 * If found: it will return to the AS server a match was found
 * Else:  it will return to the AS server no match found
 * Depending on the response from the TLDS1 Server:
 	o If found: The AS server will respond back to the client that the host name is valid
 	o If not found: the above steps are repeated to connect with TLDS2 Server
-* The client will then write down the host name followed by ìError Host Not Foundî or just the hostname in a ìRESOLVED.txtî file to notify which servers are valid and which are not inside the servers
+* The client will then write down the host name followed by ‚ÄúError Host Not Found‚Äù or just the hostname in a ‚ÄúRESOLVED.txt‚Äù file to notify which servers are valid and which are not inside the servers
 
 
 
