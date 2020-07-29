@@ -1,15 +1,15 @@
 # Client Server Host Verification
 This project was created to practice connecting a client socket to a server socket. The server socket then communicates with additional server sockets to verify if the hashed information from the client is valid or invalid.
 
-Installation
+# Installation
 * All files .txt files present must exist in the same directory as the four python files
 
-Usage
+# Usage
 * The user will run the three server files first in the following order: AS.py, TLDS1.py, TLDS2.py
 * Then the user will run the client.py file and the communication between the server and client should began
 * The files are written such that it will fetch the name of your local host machine as the hosting server.
 
-Purpose:
+# Purpose:
 * The client will iterate each line in the file “PROJ3-HNS.txt” which consist of a key, hostname pair
 	o The key will be used to hash the hostname
 * The hashed hostname will then be sent to the AS server to validate if the host name is valid.
