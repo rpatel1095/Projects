@@ -144,10 +144,10 @@ def prompt_category():
     category = ["colors", "countries"]
 
     # One Player Option Categories
-    playerCategory = input("Choose a category [Colors, Countries]" + " \n" + "Enter Category Here: ").lower()
+    playerCategory = input("Choose a category [" + ", ".join(category) + "]" + " \n" + "Enter Category Here: ").lower()
     if playerCategory not in category:
         while True:
-            playerCategory = input("Invalid Category! Choose from list of options [Colors, Countries]" + "\n"
+            playerCategory = input("Invalid Category! Choose from list of options [" + ", ".join(category) + "]" + "\n"
                                    + "Enter Category: ").lower()
             if playerCategory in category:
                 break
@@ -233,7 +233,7 @@ def initialize_game(playerCategory, numberOfLives):
     startSequence = "3 2 1"
     for char in startSequence:
         sys.stdout.write(char + "\n")
-        time.sleep(.5)
+        time.sleep(.4)
     print("You've chosen the category:", playerCategory + "\n" + "View Board and Guess letter below")
     print_game_statements(numberOfLives)
 
