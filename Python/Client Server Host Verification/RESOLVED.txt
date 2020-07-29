@@ -1,0 +1,4 @@
+mx.rutgers.com ERROR - HOST NOT FOUND
+kill.cs.rutgers.edu ERROR - HOST NOT FOUND
+www.ibm.edu ERROR - HOST NOT FOUND
+www.google.com  8.6.4.2 A
